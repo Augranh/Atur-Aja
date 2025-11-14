@@ -30,7 +30,7 @@
       </div>
 
       <div class="w-full md:w-1/2">
-        <img src="https://cdn.pixabay.com/photo/2022/08/30/01/35/face-7420068_1280.png" alt="Project Management Illustration" class="h-auto w-full object-cover" />
+        <img src="https://projectsly.com/images/blog/how-to-choose-a-best-task-management-tool.png?v=1686553999071005322" alt="Project Management Illustration" class="h-auto w-full object-cover rounded-2xl" style="border: 2px solid var(--border-color);" />
       </div>
     </div>
   </div>
