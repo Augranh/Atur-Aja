@@ -63,8 +63,13 @@ $plans = [
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <?php foreach ($plans as $plan): ?>
-                <div class="plan-card group rounded-2xl p-5 transition-all duration-300 flex flex-col"
+                <div class="plan-card group rounded-2xl p-5 transition-all duration-300 flex flex-col <?= $plan['name'] === 'Pro' ? 'relative' : '' ?>"
                     style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+                    <?php if ($plan['name'] === 'Pro'): ?>
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full text-sm font-semibold text-white" style="background-color: var(--accent-2);">
+                            Most Popular
+                        </div>
+                    <?php endif; ?>
                     <h3 class="mb-3 text-xl font-bold" style="color: var(--text-primary);">
                         <?= $plan["name"] ?>
                     </h3>
