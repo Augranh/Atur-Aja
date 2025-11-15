@@ -2,7 +2,27 @@
   "functions": {
     "api/*.php": {
       "runtime": "vercel-php@0.7.4"
+    },
+    "pages/**/*.php": {
+      "runtime": "vercel-php@0.7.4"
+    },
+    "*.php": {
+      "runtime": "vercel-php@0.7.4"
     }
   },
-  "routes": [{ "src": "/(.*)", "dest": "/api/index.php" }]
+  "routes": [
+    { "src": "/", "dest": "/index.php" },
+    { "src": "/pages/auth/login", "dest": "/pages/auth/login.php" },
+    { "src": "/pages/auth/signup", "dest": "/pages/auth/signup.php" },
+    { "src": "/pages/dashboard", "dest": "/pages/dashboard/index.php" },
+    { "src": "/pages/dashboard/(.*)", "dest": "/pages/dashboard/$1.php" },
+    { "src": "/pages/(.*)", "dest": "/pages/$1.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
+  ],
+  "rewrites": [
+    { "source": "/dashboard", "destination": "/pages/dashboard/index.php" },
+    { "source": "/dashboard/(.*)", "destination": "/pages/dashboard/$1.php" },
+    { "source": "/auth/login", "destination": "/pages/auth/login.php" },
+    { "source": "/auth/signup", "destination": "/pages/auth/signup.php" }
+  ]
 }
