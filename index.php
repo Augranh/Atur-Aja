@@ -29,6 +29,14 @@
             require __DIR__ . '/form/register-handler.php';
             break;
 
+        case '/login':
+            require __DIR__ . '/pages/auth/login.php';
+            break;
+        
+        case '/signup':
+            require __DIR__ . '/pages/auth/signup.php';
+            break;
+
         default:
             http_response_code(404);
             echo '404 - Halaman tidak ditemukan';
