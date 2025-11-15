@@ -2,16 +2,14 @@
   $current_path = $_SERVER['PHP_SELF'];
   $base_path = '';
   
-  // Jika di dalam folder pages/auth/, naik 2 level
-  if (strpos($current_path, '/pages/auth/') !== false) {
-      $base_path = '../../';
-  }
-  // Jika di dalam folder pages/, naik 1 level
-  elseif (strpos($current_path, '/pages/') !== false) {
+  if (strpos($current_path, '/pages/auth/') !== false || strpos($current_path, '/pages/dashboard/') !== false) {
       $base_path = '../';
   }
+  elseif (strpos($current_path, '/pages/index.php') !== false) {
+      $base_path = '';
+  }
   else {
-      $base_path = ''; // Jika di root (index.php), tidak perlu prefix
+      $base_path = '';
   }
   
   $navigation_items = [
@@ -45,8 +43,8 @@
           <?php endforeach; ?>
           </ul>
         <div class="flex gap-4">
-          <a href="<?= $base_path ?>pages/auth/login.php" class="btn-login px-4 py-2 text-sm font-medium transition" style="color: var(--text-secondary);" onmouseover="this.style.color='var(--accent-2)'" onmouseout="this.style.color='var(--text-secondary)'">Login</a>
-          <a href="<?= $base_path ?>pages/auth/signup.php" class="btn-register rounded-lg px-4 py-2 text-sm font-medium text-white transition" style="background-color: var(--accent-1);" onmouseover="this.style.backgroundColor='var(--accent-2)'" onmouseout="this.style.backgroundColor='var(--accent-1)'">Register</a>
+          <a href="<?= $base_path ?>auth/login.php" class="btn-login px-4 py-2 text-sm font-medium transition" style="color: var(--text-secondary);" onmouseover="this.style.color='var(--accent-2)'" onmouseout="this.style.color='var(--text-secondary)'">Login</a>
+          <a href="<?= $base_path ?>auth/signup.php" class="btn-register rounded-lg px-4 py-2 text-sm font-medium text-white transition" style="background-color: var(--accent-1);" onmouseover="this.style.backgroundColor='var(--accent-2)'" onmouseout="this.style.backgroundColor='var(--accent-1)'">Register</a>
         </div>
       </div>
       <div class="flex items-center md:hidden">
@@ -70,8 +68,8 @@
         </a>
       <?php endforeach; ?>
       <div class="mt-4 flex flex-col gap-3 pt-4" style="border-top: 1px solid var(--border-color);">
-        <a href="<?= $base_path ?>pages/auth/login.php" class="block rounded-lg px-4 py-2 text-center text-base font-medium transition" style="border: 1px solid var(--border-color); color: var(--text-secondary);" onmouseover="this.style.backgroundColor='var(--bg-secondary)'" onmouseout="this.style.backgroundColor='transparent'">Login</a>
-        <a href="<?= $base_path ?>pages/auth/signup.php" class="block rounded-lg px-4 py-2 text-center text-base font-medium text-white transition" style="background-color: var(--accent-1);" onmouseover="this.style.backgroundColor='var(--accent-2)'" onmouseout="this.style.backgroundColor='var(--accent-1)'">Register</a>
+        <a href="<?= $base_path ?>auth/login.php" class="block rounded-lg px-4 py-2 text-center text-base font-medium transition" style="border: 1px solid var(--border-color); color: var(--text-secondary);" onmouseover="this.style.backgroundColor='var(--bg-secondary)'" onmouseout="this.style.backgroundColor='transparent'">Login</a>
+        <a href="<?= $base_path ?>auth/signup.php" class="block rounded-lg px-4 py-2 text-center text-base font-medium text-white transition" style="background-color: var(--accent-1);" onmouseover="this.style.backgroundColor='var(--accent-2)'" onmouseout="this.style.backgroundColor='var(--accent-1)'">Register</a>
       </div>
     </div>
   </div>

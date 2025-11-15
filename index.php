@@ -1,9 +1,4 @@
 <?php
-    include('includes/header.php');
-    include('includes/navigation.php');
-?>
-
-<?php
     $request_uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
     switch ($request_uri) {
         case '/':
@@ -41,17 +36,3 @@
             break;
     }
 ?>
-
-<main>
-    <?php
-        include('includes/components/hero.php');
-        include('includes/components/features.php');
-        include('includes/components/solutions.php');
-        include('includes/components/testimonial.php');
-        include('includes/components/plans.php');
-        include('includes/components/resources.php');
-        // include('includes/newsletter.php');
-        include('includes/components/floatingThemeSwitch.php');
-        include('includes/footer.php');
-    ?>
-</main>
