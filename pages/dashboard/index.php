@@ -1,9 +1,9 @@
 <?php
-    include('../../includes/components/dashboard/header.php');
+    include(__DIR__ . '/../../includes/components/dashboard/header.php');
 ?>
 
 <?php
-    include('../../includes/components/dashboard/sidebar.php');
+    include(__DIR__ . '/../../includes/components/dashboard/sidebar.php');
 ?>
 
 <div class="lg:pl-64">
