@@ -1,9 +1,9 @@
 <?php
-    include(__DIR__ . '/../../includes/components/dashboard/header.php');
+    include('../../includes/components/dashboard/header.php');
 ?>
 
 <?php
-    include(__DIR__ . '/../../includes/components/dashboard/sidebar.php');
+    include('../../includes/components/dashboard/sidebar.php');
 ?>
 
 <section>

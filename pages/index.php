@@ -1,18 +1,18 @@
 <?php
-    include(__DIR__ . '/../includes/header.php');
-    include(__DIR__ . '/../includes/navigation.php');
+    include('../includes/header.php');
+    include('../includes/navigation.php');
 ?>
 
 <main>
     <?php
-        include(__DIR__ . '/../includes/components/hero.php');
-        include(__DIR__ . '/../includes/components/features.php');
-        include(__DIR__ . '/../includes/components/solutions.php');
-        include(__DIR__ . '/../includes/components/testimonial.php');
-        include(__DIR__ . '/../includes/components/plans.php');
-        include(__DIR__ . '/../includes/components/resources.php');
-        // include(__DIR__ . '/../includes/newsletter.php');
-        include(__DIR__ . '/../includes/components/floatingThemeSwitch.php');
-        include(__DIR__ . '/../includes/footer.php');
+        include('../includes/components/hero.php');
+        include('../includes/components/features.php');
+        include('../includes/components/solutions.php');
+        include('../includes/components/testimonial.php');
+        include('../includes/components/plans.php');
+        include('../includes/components/resources.php');
+        // include('../includes/newsletter.php');
+        include('../includes/components/floatingThemeSwitch.php');
+        include('../includes/footer.php');
     ?>
 </main>

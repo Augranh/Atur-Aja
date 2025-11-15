@@ -30,11 +30,11 @@
             break;
 
         case '/login':
-            require __DIR__ . '/pages/auth/login.php';
+            require __DIR__ . '/form/form-login.php';
             break;
         
         case '/signup':
-            require __DIR__ . '/pages/auth/signup.php';
+            require __DIR__ . '/form/form-register.php';
             break;
 
         default:
