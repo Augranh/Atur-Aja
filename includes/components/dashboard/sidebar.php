@@ -1,0 +1,90 @@
+<?php
+    $current_path = $_SERVER['PHP_SELF'];
+    $base_path = '';
+
+    if (strpos($current_path, '/pages/auth/') !== false) {
+        $base_path = '../../';
+    }
+    elseif (strpos($current_path, '/pages/') !== false) {
+        $base_path = '../';
+    }
+    else {
+        $base_path = '';
+    }
+
+    $navigation_items = [
+        [
+            'label' => 'Dashboard',
+            'url'   => $base_path . 'dashboard/index.php',
+            'icon'  => 'layout-dashboard',
+        ],
+        [
+            'label' => 'My Tasks',
+            'url'   => $base_path . 'dashboard/tasks.php',
+            'icon'  => 'clipboard-check',
+        ],
+        [
+            'label' => 'Projects',
+            'url'   => $base_path . 'dashboard/projects.php',
+            'icon'  => 'folder-kanban',
+        ],
+        [
+            'label' => 'Calendar',
+            'url'   => $base_path . 'dashboard/calendar.php',
+            'icon'  => 'calendar-days',
+        ],
+        [
+            'label' => 'Team',
+            'url'   => $base_path . 'dashboard/team.php',
+            'icon'  => 'users',
+        ],
+        [
+            'label' => 'Reports',
+            'url'   => $base_path . 'dashboard/reports.php',
+            'icon'  => 'bar-chart-3',
+        ],
+        [
+            'label' => 'Settings',
+            'url'   => $base_path . 'dashboard/settings.php',
+            'icon'  => 'settings',
+        ],
+    ];
+?>
+
+<div id="sidebar-dashboard" class="hidden lg:flex lg:flex-col lg:w-64 lg:fixed lg:inset-y-0 lg:border-r lg:border-border-color lg:bg-bg-primary lg:px-6 lg:py-4 transition-transform duration-300 z-40">
+    <nav class="mt-6 flex-1">
+        <ul class="space-y-2">
+            <li>
+                <a href="<?php echo $base_path; ?>dashboard/index.php" class="flex items-center px-3 py-2 rounded-md text-lg font-bold text-text-primary hover:bg-bg-secondary hover:text-text-primary transition">
+                    Atur Aja
+                </a>
+            </li>
+            <?php foreach ( $navigation_items as $item ) : ?>
+                <li>
+                    <a href="<?php echo htmlspecialchars($item['url']); ?>" class="flex items-center px-3 py-2 rounded-md text-sm font-medium text-text-primary hover:bg-bg-secondary hover:text-text-primary transition">
+                        <i data-lucide="<?php echo htmlspecialchars($item['icon']); ?>" class="w-5 h-5 mr-3"></i>
+                        <?php echo htmlspecialchars($item['label']); ?>
+                    </a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </nav>
+
+    <!-- User Profile Section -->
+    <div class="pt-4 mt-4">
+        <a href="<?php echo $base_path; ?>dashboard/profile.php" class="flex items-center px-3 py-2 rounded-md hover:bg-bg-secondary transition">
+            <div class="w-8 h-8 rounded-full bg-accent-1 flex items-center justify-center text-text-primary font-semibold">
+                U
+            </div>
+            <div class="ml-3 flex-1">
+                <p class="text-sm font-medium text-text-primary">User Name</p>
+                <p class="text-xs text-text-secondary">View Profile</p>
+            </div>
+        </a>
+    </div>
+</div>
+</button>
+
+<script>
+    lucide.createIcons();
+</script>
