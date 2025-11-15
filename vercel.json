@@ -6,9 +6,9 @@
   },
   "rewrites": [
     { "source": "/", "destination": "/api/index.php" },
-    { "source": "/dashboard", "destination": "/api/index.php" },
-    { "source": "/dashboard/(.*)", "destination": "/api/index.php" },
-    { "source": "/auth/login", "destination": "/api/index.php" },
-    { "source": "/auth/signup", "destination": "/api/index.php" }
+    { "source": "pages/dashboard", "destination": "/api/index.php" },
+    { "source": "pages/dashboard/(.*)", "destination": "/api/index.php" },
+    { "source": "pages/auth/login", "destination": "/api/index.php" },
+    { "source": "pages/auth/signup", "destination": "/api/index.php" }
   ]
 }
