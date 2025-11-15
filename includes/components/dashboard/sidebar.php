@@ -73,11 +73,11 @@
     <!-- User Profile Section -->
     <div class="pt-4 mt-4">
         <a href="<?php echo $base_path; ?>dashboard/profile.php" class="flex items-center px-3 py-2 rounded-md hover:bg-bg-secondary transition">
-            <div class="w-8 h-8 rounded-full bg-accent-1 flex items-center justify-center text-text-primary font-semibold">
+            <div class="w-8 h-8 rounded-full bg-accent-1 flex items-center justify-center text-text-primary font-semibold" id="user-avatar">
                 U
             </div>
             <div class="ml-3 flex-1">
-                <p class="text-sm font-medium text-text-primary">User Name</p>
+                <p class="text-sm font-medium text-text-primary" id="user-display-name">Loading...</p>
                 <p class="text-xs text-text-secondary">View Profile</p>
             </div>
         </a>
@@ -87,4 +87,37 @@
 
 <script>
     lucide.createIcons();
+    
+    function loadUserProfile() {
+        const loggedInEmail = localStorage.getItem('loggedInUserEmail');
+        
+        if (!loggedInEmail) {
+            window.location.href = '../auth/login.php';
+            return;
+        }
+        
+        fetch('../../includes/components/form/data/users.json')
+            .then(response => response.json())
+            .then(users => {
+                const currentUser = users.find(user => user.email === loggedInEmail);
+                
+                if (currentUser) {
+                    const displayName = currentUser.username || currentUser.email.split('@')[0];
+                    document.getElementById('user-display-name').textContent = displayName;
+                    
+                    const firstLetter = displayName.charAt(0).toUpperCase();
+                    document.getElementById('user-avatar').textContent = firstLetter;
+                    
+                    window.currentUser = currentUser;
+                } else {
+                    document.getElementById('user-display-name').textContent = 'User';
+                }
+            })
+            .catch(error => {
+                console.error('Error loading user profile:', error);
+                document.getElementById('user-display-name').textContent = loggedInEmail.split('@')[0];
+            });
+    }
+    
+    loadUserProfile();
 </script>

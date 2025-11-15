@@ -4,7 +4,13 @@
   </div>
 
   <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-    <form action="#" method="POST" class="space-y-6">
+    
+    <div id="error-message" class="mb-4 rounded-md bg-red-100 p-3 text-center text-sm text-red-700" style="display: none;">
+      
+    </div>
+
+    <!-- Ganti <form> agar kita bisa kontrol dengan ID -->
+    <form id="login-form" class="space-y-6">
       <div>
         <label for="email" class="block text-sm/6 font-medium" style="color: var(--text-primary);">Email address</label>
         <div class="mt-2">
@@ -40,3 +46,44 @@
     </p>
   </div>
 </div>
+
+<script>
+  const loginForm = document.getElementById('login-form');
+  const emailInput = document.getElementById('email');
+  const passwordInput = document.getElementById('password');
+  const errorMessage = document.getElementById('error-message');
+
+  loginForm.addEventListener('submit', function(event) {
+    
+    event.preventDefault();
+
+    const email = emailInput.value;
+    const password = passwordInput.value;
+
+    fetch('../../includes/components/form/data/users.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('File users.json tidak ditemukan.');
+        }
+        return response.json();
+      })
+      .then(users => {
+        const foundUser = users.find(user => user.email === email && user.password === password);
+
+        if (foundUser) {
+          localStorage.setItem('loggedInUserEmail', foundUser.email);
+          
+          window.location.href = '../dashboard/index.php';
+
+        } else {
+          errorMessage.textContent = 'Email atau password salah.';
+          errorMessage.style.display = 'block';
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        errorMessage.textContent = 'Terjadi kesalahan. Tidak bisa login.';
+        errorMessage.style.display = 'block';
+      });
+  });
+</script>
