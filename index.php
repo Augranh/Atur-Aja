@@ -26,9 +26,8 @@
             break;
 
         case '/register-handler':
-            require __DIR__ . '/register-handler.php';
+            require __DIR__ . '/form/register-handler.php';
             break;
-        
 
         default:
             http_response_code(404);
