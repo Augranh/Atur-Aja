@@ -5,13 +5,15 @@
     }
   },
   "routes": [
-    { "src": "/(.*)", "dest": "/api/index.php" },
-    { "src": "/dashboard/(.*)", "dest": "/pages/dashboard/index.php" },
-    { "src": "/auth/(.*)", "dest": "/pages/auth/index.php" },
     {
       "src": "/static/(.*)",
       "headers": { "cache-control": "public, max-age=31536000, immutable" },
       "dest": "/static/$1"
-    }
+    },
+    { "src": "/dashboard(?:/(.*))?", "dest": "/pages/dashboard/index.php" },
+    { "src": "/auth/login/?", "dest": "/pages/auth/login.php" },
+    { "src": "/auth/signup/?", "dest": "/pages/auth/signup.php" },
+    { "src": "/auth/?", "dest": "/pages/auth/login.php" },
+    { "src": "/(.*)", "dest": "/api/index.php" }
   ]
 }
