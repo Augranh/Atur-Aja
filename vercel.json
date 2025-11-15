@@ -4,11 +4,14 @@
       "runtime": "vercel-php@0.7.4"
     }
   },
-  "rewrites": [
-    { "source": "/", "destination": "/api/index.php" },
-    { "source": "/pages/dashboard", "destination": "/api/index.php" },
-    { "source": "/pages/dashboard/(.*)", "destination": "/api/index.php" },
-    { "source": "/pages/auth/login", "destination": "/api/index.php" },
-    { "source": "/pages/auth/signup", "destination": "/api/index.php" }
+  "routes": [
+    { "src": "/(.*)", "dest": "/api/index.php" },
+    { "src": "/dashboard/(.*)", "dest": "/pages/dashboard/index.php" },
+    { "src": "/auth/(.*)", "dest": "/pages/auth/index.php" },
+    {
+      "src": "/static/(.*)",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "dest": "/static/$1"
+    }
   ]
 }
