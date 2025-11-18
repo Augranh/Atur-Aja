@@ -5,9 +5,6 @@
     if (strpos($current_path, '/pages/auth/') !== false) {
         $base_path = '../../';
     }
-    elseif (strpos($current_path, '/pages/dashboard/') !== false) {
-        $base_path = '../../';
-    }
     elseif (strpos($current_path, '/pages/') !== false) {
         $base_path = '../';
     }
@@ -18,37 +15,37 @@
     $navigation_items = [
         [
             'label' => 'Dashboard',
-            'url'   => $base_path . 'pages/dashboard/index.php',
+            'url'   => $base_path . 'dashboard/index.php',
             'icon'  => 'layout-dashboard',
         ],
         [
             'label' => 'My Tasks',
-            'url'   => $base_path . 'pages/dashboard/tasks.php',
+            'url'   => $base_path . 'dashboard/tasks.php',
             'icon'  => 'clipboard-check',
         ],
         [
             'label' => 'Projects',
-            'url'   => $base_path . 'pages/dashboard/projects.php',
+            'url'   => $base_path . 'dashboard/projects.php',
             'icon'  => 'folder-kanban',
         ],
         [
             'label' => 'Calendar',
-            'url'   => $base_path . 'pages/dashboard/calendar.php',
+            'url'   => $base_path . 'dashboard/calendar.php',
             'icon'  => 'calendar-days',
         ],
         [
             'label' => 'Team',
-            'url'   => $base_path . 'pages/dashboard/team.php',
+            'url'   => $base_path . 'dashboard/team.php',
             'icon'  => 'users',
         ],
         [
             'label' => 'Reports',
-            'url'   => $base_path . 'pages/dashboard/reports.php',
+            'url'   => $base_path . 'dashboard/reports.php',
             'icon'  => 'bar-chart-3',
         ],
         [
             'label' => 'Settings',
-            'url'   => $base_path . 'pages/dashboard/settings.php',
+            'url'   => $base_path . 'dashboard/settings.php',
             'icon'  => 'settings',
         ],
     ];
@@ -58,7 +55,7 @@
     <nav class="mt-6 flex-1">
         <ul class="space-y-2">
             <li>
-                <a href="<?php echo $base_path; ?>pages/dashboard/index.php" class="flex items-center px-3 py-2 rounded-md text-lg font-bold text-text-primary hover:bg-bg-secondary hover:text-text-primary transition">
+                <a href="<?php echo $base_path; ?>dashboard/index.php" class="flex items-center px-3 py-2 rounded-md text-lg font-bold text-text-primary hover:bg-bg-secondary hover:text-text-primary transition">
                     Atur Aja
                 </a>
             </li>
@@ -75,7 +72,7 @@
 
     <!-- User Profile Section -->
     <div class="pt-4 mt-4">
-        <a href="<?php echo $base_path; ?>pages/dashboard/profile.php" class="flex items-center px-3 py-2 rounded-md hover:bg-bg-secondary transition">
+        <a href="<?php echo $base_path; ?>dashboard/profile.php" class="flex items-center px-3 py-2 rounded-md hover:bg-bg-secondary transition">
             <div class="w-8 h-8 rounded-full bg-accent-1 flex items-center justify-center text-text-primary font-semibold" id="user-avatar">
                 U
             </div>

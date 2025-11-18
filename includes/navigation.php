@@ -17,6 +17,7 @@
       ["label" => "Solutions", "href" => $base_path . "index.php#solution"],
       ["label" => "Plans", "href" => $base_path . "index.php#plans"],
       ["label" => "Resources", "href" => $base_path . "index.php#resources"],
+      ["label" => "Contacts", "href" => $base_path . "contacts.php"],
   ];
 ?>
 

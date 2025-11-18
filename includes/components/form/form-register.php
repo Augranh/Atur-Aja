@@ -66,7 +66,7 @@
 
     <p class="mt-8 text-center text-sm/6" style="color: var(--text-secondary);">
       Already have an account?
-      <a href="../auth/login.php" class="font-semibold transition" style="color: var(--accent-2);" onmouseover="this.style.color='var(--accent-1)'" onmouseout="this.style.color='var(--accent-2)'">Sign in</a>
+      <a href="login.php" class="font-semibold transition" style="color: var(--accent-2);" onmouseover="this.style.color='var(--accent-1)'" onmouseout="this.style.color='var(--accent-2)'">Sign in</a>
     </p>
   </div>
 </div>

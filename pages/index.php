@@ -11,6 +11,7 @@
         include('../includes/components/testimonial.php');
         include('../includes/components/plans.php');
         include('../includes/components/resources.php');
+        include('../includes/components/contacts.php');
         // include('../includes/newsletter.php');
         include('../includes/components/floatingThemeSwitch.php');
         include('../includes/footer.php');
