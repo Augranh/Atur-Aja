@@ -77,12 +77,11 @@
   </nav>
 
 <script>
-  // Script Anda sudah benar, tidak perlu diubah
   lucide.createIcons();
   const btn = document.getElementById('mobile-menu-btn');
   const menu = document.getElementById('mobile-menu');
 
-  if (btn && menu) { // Ditambahkan pengecekan agar lebih aman
+  if (btn && menu) {
     btn.addEventListener('click', () => {
         menu.classList.toggle('hidden');
     });
