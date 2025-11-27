@@ -85,3 +85,7 @@ foreach ($testimonials as $testimonial) {
     </div>
   </div>
 </section>
+
+<script>
+
+</script>

@@ -37,6 +37,31 @@
         html {
             scroll-behavior: smooth;
         }
+
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%; /* Adjust as needed */
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* For smooth transitions */
+        }
+
+        .carousel-item {
+            min-width: 100%; /* Each item takes full width of the container */
+            flex-shrink: 0; /* Prevent items from shrinking */
+        }
+
+        .carousel-prev, .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .carousel-prev { left: 10px; }
+        .carousel-next { right: 10px; }
     </style>
 </head>
     

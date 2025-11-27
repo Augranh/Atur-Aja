@@ -2,14 +2,17 @@
   $current_path = $_SERVER['PHP_SELF'];
   $base_path = '';
   
-  if (strpos($current_path, '/pages/auth/') !== false || strpos($current_path, '/pages/dashboard/') !== false) {
-      $base_path = '../';
-  }
-  elseif (strpos($current_path, '/pages/index.php') !== false) {
-      $base_path = '';
-  }
-  else {
-      $base_path = '';
+  switch (true) {
+      case (strpos($current_path, '/pages/auth/') !== false):
+      case (strpos($current_path, '/pages/dashboard/') !== false):
+          $base_path = '../';
+          break;
+      case (strpos($current_path, '/pages/index.php') !== false):
+          $base_path = '';
+          break;
+      default:
+          $base_path = '';
+          break;
   }
   
   $navigation_items = [
@@ -18,6 +21,7 @@
       ["label" => "Plans", "href" => $base_path . "index.php#plans"],
       ["label" => "Resources", "href" => $base_path . "index.php#resources"],
       ["label" => "Contacts", "href" => $base_path . "contacts.php"],
+      ["label" => "About", "href" => $base_path . "about.php"],
   ];
 ?>
 

@@ -245,6 +245,10 @@
   </div>
 </div>
 
+<?php
+    include('../includes/components/floatingThemeSwitch.php');
+?>
+
 <script>
   // Initialize Lucide icons
   if (typeof lucide !== 'undefined') {
