@@ -29,24 +29,9 @@
             'icon'  => 'folder-kanban',
         ],
         [
-            'label' => 'Calendar',
-            'url'   => $base_path . 'dashboard/calendar.php',
-            'icon'  => 'calendar-days',
-        ],
-        [
             'label' => 'Team',
             'url'   => $base_path . 'dashboard/team.php',
             'icon'  => 'users',
-        ],
-        [
-            'label' => 'Reports',
-            'url'   => $base_path . 'dashboard/reports.php',
-            'icon'  => 'bar-chart-3',
-        ],
-        [
-            'label' => 'Settings',
-            'url'   => $base_path . 'dashboard/settings.php',
-            'icon'  => 'settings',
         ],
     ];
 ?>

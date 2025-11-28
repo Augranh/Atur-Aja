@@ -10,8 +10,8 @@
         <p class="mb-8 text-lg md:text-xl" style="color: var(--text-secondary);">Organize team workflows in a more visual, flexible, and structured way to reach your goals faster. Stop juggling multiple tools and bring clarity to your projects with a platform designed for seamless collaboration.</p>
 
         <div class="flex flex-col justify-center gap-4 sm:flex-row md:justify-start">
-          <a href="#features" class="rounded-lg px-8 py-3 font-medium transition" style="border: 1px solid var(--border-color); color: var(--text-secondary);" onmouseover="this.style.backgroundColor='var(--bg-secondary)'" onmouseout="this.style.backgroundColor='transparent'"> View Demo </a>
-          <a href="signup.php" class="rounded-lg px-8 py-3 font-medium text-white transition" style="background-color: var(--accent-1);" onmouseover="this.style.backgroundColor='var(--accent-2)'" onmouseout="this.style.backgroundColor='var(--accent-1)'"> Get Started </a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="rounded-lg px-8 py-3 font-medium transition" style="border: 1px solid var(--border-color); color: var(--text-secondary);" onmouseover="this.style.backgroundColor='var(--bg-secondary)'" onmouseout="this.style.backgroundColor='transparent'"> View Demo </a>
+          <a href="auth/signup.php" class="rounded-lg px-8 py-3 font-medium text-white transition" style="background-color: var(--accent-1);" onmouseover="this.style.backgroundColor='var(--accent-2)'" onmouseout="this.style.backgroundColor='var(--accent-1)'"> Get Started </a>
         </div>
         <div class="mt-8 flex items-center gap-4 pt-8 text-sm" style="border-top: 1px solid var(--border-color); color: var(--text-secondary);">
           <div class="flex items-center gap-2">

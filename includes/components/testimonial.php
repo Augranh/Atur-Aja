@@ -60,7 +60,6 @@ $chosenTestimonials = [];
 foreach ($testimonials as $testimonial) {
     $chosenTestimonials[] = $testimonial;
 }
-
 ?>
 
 <section id="testimonials" class="testimonials-section py-12 md:py-20" style="background-color: var(--bg-primary);">
@@ -69,23 +68,80 @@ foreach ($testimonials as $testimonial) {
       <h2 class="text-3xl font-bold md:text-4xl" style="color: var(--text-primary);">What Our Users Say</h2>
       <p class="mt-2" style="color: var(--text-secondary);">Hear from some of our satisfied users</p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <?php foreach ($chosenTestimonials as $t): ?>
-        <div class="testimonial-card rounded-2xl p-6 transition-all duration-300" style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
-          <div class="mb-4 flex items-center gap-4">
-            <img src="<?= $t['photo'] ?>" alt="<?= $t['name'] ?>" class="h-16 w-16 rounded-full object-cover" />
-            <div>
-              <h3 class="text-lg font-bold" style="color: var(--text-primary);"><?= $t['name'] ?></h3>
-              <p class="text-sm" style="color: var(--text-secondary);"><?= $t['role'] ?></p>
+    
+    <!-- Carousel Row 1 -->
+    <div class="testimonial-carousel mb-6">
+      <div class="testimonial-carousel-wrapper">
+        <div class="testimonial-carousel-track">
+          <?php 
+          // First set of testimonials
+          foreach ($chosenTestimonials as $t): ?>
+            <div class="testimonial-card-carousel rounded-2xl p-6 transition-all duration-300" style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+              <div class="mb-4 flex items-center gap-4">
+                <img src="<?= $t['photo'] ?>" alt="<?= $t['name'] ?>" class="h-14 w-14 rounded-full object-cover" />
+                <div>
+                  <h3 class="text-base font-bold" style="color: var(--text-primary);"><?= $t['name'] ?></h3>
+                  <p class="text-sm" style="color: var(--text-secondary);"><?= $t['role'] ?></p>
+                </div>
+              </div>
+              <p class="text-sm leading-relaxed line-clamp-4" style="color: var(--text-secondary);">"<?= $t['feedback'] ?>"</p>
             </div>
-          </div>
-          <p class="leading-relaxed" style="color: var(--text-secondary);">"<?= $t['feedback'] ?>"</p>
+          <?php endforeach; ?>
+          
+          <?php 
+          // Duplicate for infinite scroll effect
+          foreach ($chosenTestimonials as $t): ?>
+            <div class="testimonial-card-carousel rounded-2xl p-6 transition-all duration-300" style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+              <div class="mb-4 flex items-center gap-4">
+                <img src="<?= $t['photo'] ?>" alt="<?= $t['name'] ?>" class="h-14 w-14 rounded-full object-cover" />
+                <div>
+                  <h3 class="text-base font-bold" style="color: var(--text-primary);"><?= $t['name'] ?></h3>
+                  <p class="text-sm" style="color: var(--text-secondary);"><?= $t['role'] ?></p>
+                </div>
+              </div>
+              <p class="text-sm leading-relaxed line-clamp-4" style="color: var(--text-secondary);">"<?= $t['feedback'] ?>"</p>
+            </div>
+          <?php endforeach; ?>
         </div>
-      <?php endforeach; ?>
+      </div>
+    </div>
+
+    <!-- Carousel Row 2 (Reverse Direction) -->
+    <div class="testimonial-carousel">
+      <div class="testimonial-carousel-wrapper">
+        <div class="testimonial-carousel-track reverse">
+          <?php 
+          // Reverse array for second row
+          $reversedTestimonials = array_reverse($chosenTestimonials);
+          foreach ($reversedTestimonials as $t): ?>
+            <div class="testimonial-card-carousel rounded-2xl p-6 transition-all duration-300" style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+              <div class="mb-4 flex items-center gap-4">
+                <img src="<?= $t['photo'] ?>" alt="<?= $t['name'] ?>" class="h-14 w-14 rounded-full object-cover" />
+                <div>
+                  <h3 class="text-base font-bold" style="color: var(--text-primary);"><?= $t['name'] ?></h3>
+                  <p class="text-sm" style="color: var(--text-secondary);"><?= $t['role'] ?></p>
+                </div>
+              </div>
+              <p class="text-sm leading-relaxed line-clamp-4" style="color: var(--text-secondary);">"<?= $t['feedback'] ?>"</p>
+            </div>
+          <?php endforeach; ?>
+          
+          <?php 
+          // Duplicate for infinite scroll effect
+          foreach ($reversedTestimonials as $t): ?>
+            <div class="testimonial-card-carousel rounded-2xl p-6 transition-all duration-300" style="border: 1px solid var(--border-color); background-color: var(--bg-secondary);">
+              <div class="mb-4 flex items-center gap-4">
+                <img src="<?= $t['photo'] ?>" alt="<?= $t['name'] ?>" class="h-14 w-14 rounded-full object-cover" />
+                <div>
+                  <h3 class="text-base font-bold" style="color: var(--text-primary);"><?= $t['name'] ?></h3>
+                  <p class="text-sm" style="color: var(--text-secondary);"><?= $t['role'] ?></p>
+                </div>
+              </div>
+              <p class="text-sm leading-relaxed line-clamp-4" style="color: var(--text-secondary);">"<?= $t['feedback'] ?>"</p>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-
-<script>
-
-</script>

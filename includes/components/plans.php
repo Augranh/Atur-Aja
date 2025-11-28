@@ -40,16 +40,6 @@ $plans = [
             "Unlimited users and projects",
             "API access",
             "Custom branding",
-            "Monthly performance reviews",
-            "Early access to new features",
-            "Personalized onboarding sessions",
-            "Dedicated technical support team",
-            "Custom workflow automation",
-            "Data migration assistance",
-            "Compliance and audit support",
-            "Access to beta features",
-            "Quarterly business reviews",
-            "Volume licensing discounts"
         ]
     ]
 ];

@@ -62,6 +62,62 @@
 
         .carousel-prev { left: 10px; }
         .carousel-next { right: 10px; }
+
+        .testimonial-carousel {
+          --gap: 1.5rem;
+          --duration: 40s;
+          --scroll-start: 0;
+          --scroll-end: calc(-50% - var(--gap) / 2);
+        }
+
+        .testimonial-carousel-track {
+          display: flex;
+          gap: var(--gap);
+          width: max-content;
+          animation: scroll var(--duration) linear infinite;
+        }
+
+        .testimonial-carousel:hover .testimonial-carousel-track {
+          animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+          from {
+            transform: translateX(var(--scroll-start));
+          }
+          to {
+            transform: translateX(var(--scroll-end));
+          }
+        }
+
+        .testimonial-carousel-wrapper {
+          overflow: hidden;
+          -webkit-mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent
+          );
+          mask-image: linear-gradient(
+            to right,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent
+          );
+        }
+
+        .testimonial-card-carousel {
+          flex-shrink: 0;
+          width: 380px;
+          max-width: 90vw;
+        }
+
+        /* Row 2 - reverse direction */
+        .testimonial-carousel-track.reverse {
+          animation-direction: reverse;
+        }
     </style>
 </head>
     

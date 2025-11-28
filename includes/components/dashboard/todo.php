@@ -150,28 +150,28 @@
     $get_priority_class = function($priority) {
         switch (strtolower($priority)) {
             case 'high':
-                return 'bg-black text-red-900 dark:bg-black dark:text-red-300';
+                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400';
             case 'medium':
-                return 'bg-black text-yellow-900 dark:bg-black dark:text-yellow-300';
+                return 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400';
             case 'low':
-                return 'bg-black text-green-900 dark:bg-black dark:text-green-300';
+                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400';
             default:
-                return 'bg-black text-gray-900 dark:bg-black dark:text-gray-300';
+                return 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300';
         }
     };
 
     $choose_status_class = function($status) {
         switch (strtolower($status)) {
             case 'completed':
-                return 'bg-black text-green-900 dark:bg-black dark:text-green-300';
+                return 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400';
             case 'in progress':
-                return 'bg-black text-blue-900 dark:bg-black dark:text-blue-300';
+                return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400';
             case 'overdue':
-                return 'bg-black text-red-900 dark:bg-black dark:text-red-300';
+                return 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400';
             case 'not started':
-                return 'bg-black text-gray-900 dark:bg-black dark:text-gray-300';
+                return 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300';
             default:
-                return 'bg-black text-gray-900 dark:bg-black dark:text-gray-300';
+                return 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300';
         }
     };
 ?>
@@ -245,12 +245,7 @@
   </div>
 </div>
 
-<?php
-    include('../includes/components/floatingThemeSwitch.php');
-?>
-
 <script>
-  // Initialize Lucide icons
   if (typeof lucide !== 'undefined') {
     lucide.createIcons();
   }

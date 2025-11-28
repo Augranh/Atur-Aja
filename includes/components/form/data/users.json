@@ -35,5 +35,15 @@
         "email": "michael.timothy2006@gmail.com",
         "password": "michael2022006",
         "username": "memememek"
+    },
+    {
+        "email": "a@mail.com",
+        "password": "k123456789",
+        "username": "dokja123"
+    },
+    {
+        "email": "david@gmail.com",
+        "password": "123456789",
+        "username": "David"
     }
 ]
