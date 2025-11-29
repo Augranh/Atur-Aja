@@ -33,6 +33,11 @@
             'url'   => $base_path . 'dashboard/team.php',
             'icon'  => 'users',
         ],
+        [
+            'label' => 'Logout',
+            'url'   => $base_path . 'dashboard/logout.php',
+            'icon'  => 'log-out',
+        ]
     ];
 ?>
 

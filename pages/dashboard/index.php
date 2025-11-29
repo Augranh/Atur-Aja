@@ -67,6 +67,7 @@
                 include('../../includes/components/floatingThemeSwitch.php');
             ?>
         </div>
+        <?php include('../../includes/components/floatingThemeSwitch.php'); ?>
     </main>
 </div>
 

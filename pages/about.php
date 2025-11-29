@@ -1,9 +1,4 @@
 <?php
-    include('../includes/header.php');
-    include('../includes/navigation.php');
-?>
-
-<?php
     $projects = [
         [
             'name' => 'U-Reserve',
@@ -25,6 +20,22 @@
             'name' => 'Simple RAG Discord Bot With Gemini API',
             'url' => 'https://github.com/',
         ],
+        [
+            'name' => 'Nextjs Starter Template for Business',
+            'url' => 'https://github.com/Hwayeeon/template-nextjs',
+        ],
+        [
+            'name' => 'Sentiment Analysis on myTelkomsel App Reviews',
+            'url' => 'https://github.com/DavidsonRafaelK/ufxa',
+        ],
+        [
+            'name' => 'Pre-Order Food Website for church',
+            'url' => 'https://lektor-smoky.vercel.app/'
+        ],
+        [
+            'name' => 'MacOS Installation Guide for Non-Apple Hardware',
+            'url' => 'https://github.com/DavidsonRafaelK/MacOS-Installation'
+        ]
     ];
 ?>
 

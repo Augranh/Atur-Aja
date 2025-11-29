@@ -60,7 +60,7 @@
     const email = emailInput.value;
     const password = passwordInput.value;
 
-    fetch('../../includes/components/form/data/users.json')
+    fetch('../includes/components/form/data/users.json')
       .then(response => {
         if (!response.ok) {
           throw new Error('File users.json tidak ditemukan.');
@@ -73,7 +73,7 @@
         if (foundUser) {
           localStorage.setItem('loggedInUserEmail', foundUser.email);
           
-          window.location.href = '../dashboard/index.php';
+          window.location.href = 'dashboard/index.php';
 
         } else {
           errorMessage.textContent = 'Email atau password salah.';

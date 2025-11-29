@@ -1,18 +1,25 @@
 <?php
+    // Router menggunakan PHP switch statement
+    $content = "";
+    $mod = "";
+
+    if(isset($_GET['page'])) $mod = $_GET['page'];
+
+    switch ($mod) {
+        case "contacts" : $content = "contacts.php"; break;
+        case "about"    : $content = "about.php"; break;
+        case "login"    : $content = "auth/login.php"; break;
+        case "register" : $content = "auth/signup.php"; break;
+        default         : $content = "home.php";
+    }
+
     include('../includes/header.php');
     include('../includes/navigation.php');
 ?>
 
 <main>
     <?php
-        include('../includes/components/hero.php');
-        include('../includes/components/features.php');
-        include('../includes/components/solutions.php');
-        include('../includes/components/testimonial.php');
-        include('../includes/components/plans.php');
-        include('../includes/components/resources.php');
-        // include('../includes/components/contacts.php');
-        include('../includes/components/newsletter.php');
+        include($content);
         include('../includes/components/floatingThemeSwitch.php');
         include('../includes/footer.php');
     ?>

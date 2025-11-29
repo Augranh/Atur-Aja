@@ -1,8 +1,3 @@
-<?php
-    include('../includes/header.php');
-    include('../includes/navigation.php');
-?>
-
 <main style="background-color: var(--bg-primary);">
     <section class="py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center">
