@@ -9,7 +9,7 @@
       
     </div>
 
-    <!-- Ganti <form> agar kita bisa kontrol dengan ID -->
+    <!-- Kontrol dengan id -->
     <form id="login-form" class="space-y-6">
       <div>
         <label for="email" class="block text-sm/6 font-medium" style="color: var(--text-primary);">Email address</label>

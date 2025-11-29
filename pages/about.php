@@ -99,11 +99,6 @@
     </div>
 </section>
 
-<?php
-    include('../includes/components/floatingThemeSwitch.php');
-    include('../includes/footer.php');
-?>
-
 <script>
     lucide.createIcons();
 </script>

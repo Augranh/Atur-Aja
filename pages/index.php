@@ -1,5 +1,4 @@
 <?php
-    // Router menggunakan PHP switch statement
     $content = "";
     $mod = "";
 

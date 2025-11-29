@@ -64,7 +64,6 @@
         <div class="mx-auto max-w-7xl space-y-6">
             <?php
                 include('../../includes/components/dashboard/todo.php');
-                include('../../includes/components/floatingThemeSwitch.php');
             ?>
         </div>
         <?php include('../../includes/components/floatingThemeSwitch.php'); ?>

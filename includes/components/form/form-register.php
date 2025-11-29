@@ -116,7 +116,7 @@
       return;
     }
 
-    fetch('../../includes/components/form/register-handler.php', {
+    fetch('../includes/components/form/register-handler.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -134,7 +134,7 @@
         successMessage.style.display = 'block';
         
         setTimeout(() => {
-          window.location.href = 'login.php';
+          window.location.href = 'index.php?page=login';
         }, 2000);
       } else {
         errorMessage.textContent = data.message || 'Terjadi kesalahan saat registrasi.';
